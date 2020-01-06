@@ -1,6 +1,5 @@
 module LicenseChecker.Internal
-  ( module Export
-  , License
+  ( License
   , init
   ) where
 
@@ -9,7 +8,6 @@ import Data.Array (some, uncons)
 import Data.Char.Unicode as Char
 import Data.Either (Either(Left, Right))
 import Data.Maybe (Maybe(Nothing, Just))
-import Data.Maybe (Maybe(Nothing, Just)) as Export
 import Data.Semigroup.First (First(First))
 import Data.Set (Set)
 import Data.String.Common (split)
