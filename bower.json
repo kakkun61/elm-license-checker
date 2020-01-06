@@ -1,0 +1,27 @@
+{
+    "name": "purescript-elm-license-checker",
+    "license": [
+        "BSD-3-Clause"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/kakkun61/elm-license-checker.git"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-effect": "^v2.0.1",
+        "purescript-node-fs": "^v5.0.1",
+        "purescript-node-path": "^v3.0.0",
+        "purescript-node-process": "^v7.0.0",
+        "purescript-parsing": "^v5.0.3",
+        "purescript-prelude": "^v4.1.1",
+        "purescript-psci-support": "^v4.0.0",
+        "purescript-read": "^v1.0.1",
+        "purescript-simple-json": "^v7.0.0"
+    }
+}
