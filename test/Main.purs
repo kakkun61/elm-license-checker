@@ -6,4 +6,4 @@ import Effect (Effect)
 import Effect.Exception (throw)
 
 main :: Effect Unit
-main = throw "uninplemeted"
+main = throw "unimplemented"
