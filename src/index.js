@@ -32,9 +32,9 @@ function convert(name, license) {
     publisher: null,
     email: null,
     url: null,
-    licenses: fromJust("", license.license),
-    licenseFile: fromJust("", license.licenseFile),
-    licenseText: fromJust("", license.licenseText),
+    licenses: fromJust(null, license.license),
+    licenseFile: fromJust(null, license.licenseFile),
+    licenseText: fromJust(null, license.licenseText),
     licenseModified: null
   };
 }
