@@ -9,7 +9,6 @@ import Data.Char.Unicode as Char
 import Data.Either (Either(Left, Right))
 import Data.Maybe (Maybe(Nothing, Just))
 import Data.Semigroup.First (First(First))
-import Data.Set (Set)
 import Data.String.Common (split)
 import Data.String.Pattern (Pattern(Pattern))
 import Data.String.Read (class Read, read)
@@ -50,12 +49,6 @@ type ElmJsonPackage
     , dependencies :: Object Version
     , license :: Maybe String
     }
-
-type PackageName
-  = String
-
-type Package
-  = { name :: PackageName, versions :: Set Version }
 
 type License
   = { name :: String
