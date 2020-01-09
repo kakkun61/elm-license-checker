@@ -39,7 +39,7 @@ function convert(name, license) {
   };
 }
 
-function fromJust(value, nothing) {
+function fromJust(nothing, value) {
   return value instanceof Data_Maybe.Just ? value.value0 : nothing;
 }
 
