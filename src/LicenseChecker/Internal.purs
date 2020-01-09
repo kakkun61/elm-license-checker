@@ -1,5 +1,6 @@
 module LicenseChecker.Internal
   ( License
+  , Version
   , init
   ) where
 
@@ -45,13 +46,18 @@ type ElmJsonApplication
 
 -- https://github.com/elm/compiler/blob/master/docs/elm.json/package.md
 type ElmJsonPackage
-  = { "elm-version" :: Version
-    , dependencies :: Object Version
+  = { name :: String
+    , summary :: Maybe String
     , license :: Maybe String
+    , version :: Version
+    , "elm-version" :: Version
+    , dependencies :: Object Version
     }
 
 type License
   = { name :: String
+    , version :: Version
+    , summary :: Maybe String
     , license :: Maybe String
     , licenseText :: Maybe String
     , licenseFile :: Maybe FilePath
@@ -157,5 +163,12 @@ init dir = do
           (\text -> { file: Just licensePath, text: Just text }) <$> Buffer.toString UTF8 buf
         else
           pure { file: Nothing, text: Nothing }
-      pure { name: id, license: json.license, licenseText: license.text, licenseFile: license.file }
+      pure
+        { name: id
+        , version: json.version
+        , summary: json.summary
+        , license: json.license
+        , licenseText: license.text
+        , licenseFile: license.file
+        }
     _ -> throw $ "a package name is not splitted into 2 by \"/\": " <> id

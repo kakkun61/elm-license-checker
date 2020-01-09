@@ -5,7 +5,7 @@ module LicenseChecker
 
 import Prelude
 import LicenseChecker.Internal (License)
-import LicenseChecker.Internal (License) as Export
+import LicenseChecker.Internal (License, Version) as Export
 import LicenseChecker.Internal as Internal
 import Data.Set (Set)
 import Data.Set as Set

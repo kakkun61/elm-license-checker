@@ -1,5 +1,6 @@
 const LicenseChecker_Internal = require('../output/LicenseChecker.Internal/index.js');
 const Data_Maybe = require('../output/Data.Maybe/index.js');
+const Data_Show = require('../output/Data.Show/index.js');
 const debug = require('debug');
 
 // Set up debug logging
@@ -26,8 +27,8 @@ function init(option, callback) {
 function convert(name, license) {
   return {
     name: name,
-    version: null,
-    description: null,
+    version: showVersion(license.version),
+    description: fromJust(null, license.summary),
     repository: null,
     publisher: null,
     email: null,
@@ -38,6 +39,8 @@ function convert(name, license) {
     licenseModified: null
   };
 }
+
+const showVersion = Data_Show.show(LicenseChecker_Internal.showVersion);
 
 function fromJust(nothing, value) {
   return value instanceof Data_Maybe.Just ? value.value0 : nothing;
