@@ -1,12 +1,12 @@
-module LicenseChecker
+module ElmLicenseChecker
   ( module Export
   , init
   ) where
 
 import Prelude
-import LicenseChecker.Internal (License)
-import LicenseChecker.Internal (License, Version) as Export
-import LicenseChecker.Internal as Internal
+import ElmLicenseChecker.Internal (License)
+import ElmLicenseChecker.Internal (License, Version) as Export
+import ElmLicenseChecker.Internal as Internal
 import Data.Set (Set)
 import Data.Set as Set
 import Node.Path (FilePath)

@@ -1,4 +1,4 @@
-module LicenseChecker.Internal
+module ElmLicenseChecker.Internal
   ( License
   , Version
   , init

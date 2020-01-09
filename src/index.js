@@ -1,4 +1,4 @@
-const LicenseChecker_Internal = require('../output/LicenseChecker.Internal/index.js');
+const ElmLicenseChecker_Internal = require('../output/ElmLicenseChecker.Internal/index.js');
 const Data_Maybe = require('../output/Data.Maybe/index.js');
 const Data_Show = require('../output/Data.Show/index.js');
 const debug = require('debug');
@@ -12,7 +12,7 @@ function init(option, callback) {
   debugLog('scanning %s', option.start);
 
   try {
-    const licenses = LicenseChecker_Internal.init(option.start)();
+    const licenses = ElmLicenseChecker_Internal.init(option.start)();
     const result = {}
     for (let [name, license] of Object.entries(licenses)) {
       result[name] = convert(name, license);
@@ -40,7 +40,7 @@ function convert(name, license) {
   };
 }
 
-const showVersion = Data_Show.show(LicenseChecker_Internal.showVersion);
+const showVersion = Data_Show.show(ElmLicenseChecker_Internal.showVersion);
 
 function fromJust(nothing, value) {
   return value instanceof Data_Maybe.Just ? value.value0 : nothing;
