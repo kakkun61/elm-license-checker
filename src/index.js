@@ -14,17 +14,29 @@ function init(option, callback) {
     const licenses = LicenseChecker_Internal.init(option.start)();
     const result = {}
     for (let [name, license] of Object.entries(licenses)) {
-      result[name] = {
-        licenses: fromJust("", license.license),
-        licenseFile: fromJust("", license.licenseFile),
-        licenseText: fromJust("", license.licenseText)
-      }
+      result[name] = convert(name, license);
     }
     callback(null, result);
   }
   catch (e) {
     callback(e, null);
   }
+}
+
+function convert(name, license) {
+  return {
+    name: name,
+    version: null,
+    description: null,
+    repository: null,
+    publisher: null,
+    email: null,
+    url: null,
+    licenses: fromJust("", license.license),
+    licenseFile: fromJust("", license.licenseFile),
+    licenseText: fromJust("", license.licenseText),
+    licenseModified: null
+  };
 }
 
 function fromJust(value, nothing) {
