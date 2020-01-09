@@ -15,18 +15,9 @@ function init(option, callback) {
     const result = {}
     for (let [name, license] of Object.entries(licenses)) {
       result[name] = {
-        licenses:
-          license.license instanceof Data_Maybe.Just ?
-            license.license.value0 :
-            "",
-        licenseFile:
-          license.licenseFile instanceof Data_Maybe.Just ?
-            license.licenseFile.value0 :
-            "",
-        licenseText:
-          license.licenseText instanceof Data_Maybe.Just ?
-            license.licenseText.value0 :
-            "",
+        licenses: fromJust("", license.license),
+        licenseFile: fromJust("", license.licenseFile),
+        licenseText: fromJust("", license.licenseText)
       }
     }
     callback(null, result);
@@ -34,6 +25,10 @@ function init(option, callback) {
   catch (e) {
     callback(e, null);
   }
+}
+
+function fromJust(value, nothing) {
+  return value instanceof Data_Maybe.Just ? value.value0 : nothing;
 }
 
 module.exports = {
