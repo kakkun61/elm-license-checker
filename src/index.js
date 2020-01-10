@@ -28,15 +28,15 @@ function convert(name, license) {
   return {
     name: name,
     version: showVersion(license.version),
-    description: fromJust(null, license.summary),
-    repository: null,
-    publisher: null,
-    email: null,
-    url: null,
-    licenses: fromJust(null, license.license),
-    licenseFile: fromJust(null, license.licenseFile),
-    licenseText: fromJust(null, license.licenseText),
-    licenseModified: null
+    description: fromJust(undefined, license.summary),
+    repository: undefined,
+    publisher: undefined,
+    email: undefined,
+    url: undefined,
+    licenses: fromJust(undefined, license.license),
+    licenseFile: fromJust(undefined, license.licenseFile),
+    licenseText: fromJust(undefined, license.licenseText),
+    licenseModified: undefined
   };
 }
 
