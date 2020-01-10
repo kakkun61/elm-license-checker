@@ -5,7 +5,7 @@
 [npm]: https://www.npmjs.com/package/elm-license-checker
 [npm-badge]: https://img.shields.io/npm/v/elm-license-checker
 [pursuit]: https://pursuit.purescript.org/packages/purescript-elm-license-checker/
-[pursuit-badge]: https://img.shields.io/badge/pursuit-v2.0.0-%231d222d
+[pursuit-badge]: https://img.shields.io/badge/pursuit-v2.1.0-%231d222d
 
 Treats the licenses of the dependencies of a package.
 

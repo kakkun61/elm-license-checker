@@ -1,3 +1,9 @@
+# 2.1.0 - 2020.01.10
+
+- accepting the redundant fields of the `option` record of the `init` function
+- using `undefined` as the fields without data of the result instead of `null`
+- putting the PureScript dependencies' LICENSEs into the CREDIT
+
 # 2.0.0 - 2020.01.09
 
 ## Breaking Changes
