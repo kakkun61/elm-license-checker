@@ -13,7 +13,7 @@ function init(option, callback) {
     const licenses = lib.init(option.start)();
     const result = {}
     for (let [name, license] of Object.entries(licenses)) {
-      result[name] = convert(name, license);
+      result[name + '@' + license.version] = convert(name, license);
     }
     callback(null, result);
   }
