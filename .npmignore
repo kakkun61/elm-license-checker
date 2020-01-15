@@ -10,8 +10,8 @@
 
 /src/**/*.purs
 /test
-/output/cache-db.json
-/output/**/externs.json
+/output/**/*
+!/output/lib.js
 /packages.dhall
 /spago.dhall
 /psakefile.ps1

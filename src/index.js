@@ -1,4 +1,4 @@
-const ElmLicenseChecker_Foreign = require('../output/ElmLicenseChecker.Foreign/index.js');
+const lib = require('../output/lib.js');
 const debug = require('debug');
 
 // Set up debug logging
@@ -10,7 +10,7 @@ function init(option, callback) {
   debugLog('scanning %s', option.start);
 
   try {
-    const licenses = ElmLicenseChecker_Foreign.init(option.start)();
+    const licenses = lib.init(option.start)();
     const result = {}
     for (let [name, license] of Object.entries(licenses)) {
       result[name] = convert(name, license);

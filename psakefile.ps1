@@ -14,6 +14,10 @@ Task Format {
     Exec { Get-ChildItem -Filter '*.hs' -Recurse src | ForEach-Object { npx purty --write $_.FullName } }
 }
 
+Task Bundle {
+    Exec { npx spago bundle-module --main ElmLicenseChecker.Foreign --to .\output\lib.js }
+}
+
 # call like Invoke-psake -task Release -parameters @{'bump' = 'major'}
 Task Release {
     Exec {
