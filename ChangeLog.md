@@ -1,3 +1,10 @@
+# 2.2.0 - 2020.01.16
+
+- add “@” and versions to keys (foo → foo@1.0.0)
+  - for more compatibility with NPM License Checker
+- bundling (NPM package unpacked size: 18MB → 180kB)
+- getting more tolerant to PureScript's internal representations
+
 # 2.1.0 - 2020.01.10
 
 - accepting the redundant fields of the `option` record of the `init` function

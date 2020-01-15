@@ -1,4 +1,4 @@
-// Type definitions for elm-license-checker 2.1.0
+// Type definitions for elm-license-checker 2.2.0
 // Project: https://github.com/kakkun61/elm-license-checker
 // Definitions by: 岡本和樹 (Kazuki Okamoto) <https://github.com/kakkun61>,
 //                 Rogier Schouten <https://github.com/rogierschouten>,

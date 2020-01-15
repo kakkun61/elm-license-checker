@@ -1,6 +1,6 @@
 {
   "name": "elm-license-checker",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Check the licenses of Elm packages.",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
