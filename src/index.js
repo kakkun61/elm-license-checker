@@ -3,11 +3,15 @@ const debug = require('debug');
 
 // Set up debug logging
 // https://www.npmjs.com/package/debug#stderr-vs-stdout
-const debugLog = debug('elm-license-checker:log');
-debugLog.log = console.log.bind(console);
+const logDebug = debug('elm-license-checker:log');
+logDebug.log = console.log.bind(console);
+const logWarning = debug('elm-license-checker:warning');
 
 function init(option, callback) {
-  debugLog('scanning %s', option.start);
+  logDebug('scanning %s', option.start);
+
+  const unimplemented = getUnimplemented(option);
+  if (0 < unimplemented.length) logWarning('unimplemented options given: %o', unimplemented);
 
   try {
     const licenses = lib.init(option.start)();
@@ -22,6 +26,7 @@ function init(option, callback) {
   }
 }
 
+// @pure
 function convert(name, license) {
   const result = { name: name, version: license.version };
   for (let [key, value] of Object.entries(license)) {
@@ -29,6 +34,13 @@ function convert(name, license) {
     result[key] = value;
   }
   return result;
+}
+
+// @pure
+function getUnimplemented(option) {
+  const implemented = ['start'];
+  const given = Object.keys(option);
+  return given.filter((e) => !implemented.includes(e));
 }
 
 module.exports = {
