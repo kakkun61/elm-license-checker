@@ -14,26 +14,11 @@ function init(option, callback) {
   if (0 < unimplemented.length) logWarning('unimplemented options given: %o', unimplemented);
 
   try {
-    const licenses = lib.init(option.start)();
-    const result = {}
-    for (let [name, license] of Object.entries(licenses)) {
-      result[name + '@' + license.version] = convert(name, license);
-    }
-    callback(null, result);
+    callback(null, lib.init(option.start)());
   }
   catch (e) {
     callback(e, null);
   }
-}
-
-// @pure
-function convert(name, license) {
-  const result = { name: name, version: license.version };
-  for (let [key, value] of Object.entries(license)) {
-    if (!value) continue;
-    result[key] = value;
-  }
-  return result;
 }
 
 // @pure

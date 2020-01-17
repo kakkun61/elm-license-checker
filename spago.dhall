@@ -6,10 +6,10 @@
     , "node-fs"
     , "node-path"
     , "node-process"
-    , "nullable"
     , "parsing"
     , "read"
     , "simple-json"
+    , "tuples"
     ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
