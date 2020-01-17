@@ -15,7 +15,7 @@ Task Format {
 }
 
 Task Bundle {
-    Exec { npx spago bundle-module --main ElmLicenseChecker.Foreign --to .\output\lib.js }
+    Exec { npx spago bundle-module --main ElmLicenseChecker.Bundle --to .\output\bundle.js }
 }
 
 # call like Invoke-psake -task Release -parameters @{'bump' = 'major'}

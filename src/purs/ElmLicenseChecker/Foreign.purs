@@ -1,13 +1,14 @@
 module ElmLicenseChecker.Foreign
-  ( init
+  ( License
+  , init
   ) where
 
 import Prelude
+import ElmLicenseChecker.Internal as Internal
 import Control.Monad.ST as ST
 import Data.Maybe(maybe)
 import Data.Tuple (Tuple (Tuple))
 import Effect (Effect)
-import ElmLicenseChecker.Internal as Internal
 import Foreign.Object (Object)
 import Foreign.Object as Object
 import Foreign.Object.ST (new, poke) as STObject

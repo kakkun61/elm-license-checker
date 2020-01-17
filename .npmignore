@@ -8,10 +8,11 @@
 /.psa*
 /.spago
 
-/src/**/*.purs
-/test
+/src/purs/
+/bin/purs/
+/test/
 /output/**/*
-!/output/lib.js
+!/output/bundle.js
 /packages.dhall
 /spago.dhall
 /psakefile.ps1

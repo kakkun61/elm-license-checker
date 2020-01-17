@@ -2,8 +2,11 @@
   "name": "elm-license-checker",
   "version": "2.2.1",
   "description": "Check the licenses of Elm packages.",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "main": "./src/js/index.js",
+  "types": "./src/ts/index.d.ts",
+  "bin": {
+    "elm-license-checker": "./bin/elm-license-checker"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +34,7 @@
   },
   "dependencies": {
     "@types/license-checker": "^25.0.0",
-    "debug": "^4.1.1"
+    "debug": "^4.1.1",
+    "treeify": "^1.1.0"
   }
 }

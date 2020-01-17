@@ -1,4 +1,6 @@
-const lib = require('../output/lib.js');
+"use strict";
+
+const lib = require('../../output/bundle.js');
 const debug = require('debug');
 
 // Set up debug logging

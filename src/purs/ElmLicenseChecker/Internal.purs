@@ -26,8 +26,8 @@ import Node.Path (FilePath, sep)
 import Node.Platform (Platform(Win32))
 import Node.Process (lookupEnv, platform)
 import Simple.JSON (class ReadForeign, readJSON)
-import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser (fail) as P
+import Text.Parsing.Parser (runParser)
 import Text.Parsing.Parser.String (char) as P
 import Text.Parsing.Parser.Token (digit) as P
 

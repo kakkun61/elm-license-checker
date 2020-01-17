@@ -12,7 +12,7 @@
     , "tuples"
     ]
 , packages = ./packages.dhall
-, sources = [ "src/**/*.purs", "test/**/*.purs" ]
+, sources = [ "src/purs/**/*.purs", "test/**/*.purs" ]
 , license = "BSD-3-Clause"
 , repository = "git://github.com/kakkun61/elm-license-checker.git"
 }
