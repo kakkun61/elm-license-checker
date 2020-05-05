@@ -27,10 +27,10 @@
   "homepage": "https://github.com/kakkun61/elm-license-checker",
   "devDependencies": {
     "bower": "^1.8.8",
-    "pulp": "^13.0.0",
-    "purescript": "^0.13.5",
-    "purty": "^4.5.2",
-    "spago": "^0.13.0"
+    "pulp": "^14.0.0",
+    "purescript": "^0.13.6",
+    "purty": "^6.2.0",
+    "spago": "^0.15.2"
   },
   "dependencies": {
     "@types/license-checker": "^25.0.0",
