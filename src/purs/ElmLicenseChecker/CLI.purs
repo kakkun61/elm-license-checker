@@ -15,4 +15,4 @@ cli :: Effect Unit
 cli = do
   workDir <- cwd
   licenses <- init workDir
-  Console.log (treeify (licenses))
+  Console.log $ treeify $ licenses
