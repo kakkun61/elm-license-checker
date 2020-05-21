@@ -18,6 +18,10 @@ node_modules: package.json package-lock.json
 repl: .spago
 	npx spago repl
 
+.PHONY: test
+test: .spago
+	npx spago test
+
 .PHONY: bundle
 bundle: output/bundle.js
 

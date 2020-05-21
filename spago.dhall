@@ -9,6 +9,7 @@
     , "parsing"
     , "read"
     , "simple-json"
+    , "spec"
     , "tuples"
     ]
 , packages = ./packages.dhall
