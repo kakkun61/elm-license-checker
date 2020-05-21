@@ -26,7 +26,7 @@ test: .spago
 bundle: output/bundle.js
 
 output/bundle.js: build
-	$(PWSH) -Command "& { npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to .\output\bundle.js }"
+	 npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to .\output\bundle.js
 
 .PHONY: pack
 pack: elm-license-checker-2.2.1.tgz
