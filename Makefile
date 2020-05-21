@@ -28,6 +28,12 @@ bundle: output/bundle.js
 output/bundle.js: build
 	$(PWSH) -Command "& { npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to .\output\bundle.js }"
 
+.PHONY: pack
+pack: elm-license-checker-2.2.1.tgz
+
+elm-license-checker-2.2.1.tgz: bin/elm-license-checker src/js/index.js src/ts/index.d.ts output/bundle.js
+	npm pack
+
 .PHONY: format
 format:
 	$(PWSH) -Command "& { Get-ChildItem -Filter '*.purs' -Recurse src, test | ForEach-Object { npx purty --write $$_.FullName } }"

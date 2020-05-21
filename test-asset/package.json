@@ -9,7 +9,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "elm-license-checker": "file:..",
+    "elm-license-checker": "file:../elm-license-checker-2.2.1.tgz",
     "license-checker": "^25.0.1"
   }
 }

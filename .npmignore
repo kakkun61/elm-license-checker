@@ -11,6 +11,7 @@
 /src/purs/
 /bin/purs/
 /test/
+/test-asset/
 /output/**/*
 !/output/bundle.js
 /packages.dhall
@@ -18,3 +19,4 @@
 /psakefile.ps1
 /bower.json
 /elm-license-checker-*.tgz
+/Makefile
