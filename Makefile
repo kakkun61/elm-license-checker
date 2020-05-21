@@ -37,7 +37,7 @@ bump-version:
 	npx spago bump-version --no-dry-run $(BUMP)
 
 .PHONY: publish-npm
-publish-spago:
+publish-npm:
 	npm publish
 
 .PHONY: publish-pulp
