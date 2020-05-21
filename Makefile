@@ -30,7 +30,7 @@ output/bundle.js: build
 
 .PHONY: format
 format:
-	$(PWSH) -Command "& { Get-ChildItem -Filter '*.hs' -Recurse src | ForEach-Object { npx purty --write $$_.FullName } }"
+	$(PWSH) -Command "& { Get-ChildItem -Filter '*.purs' -Recurse src, test | ForEach-Object { npx purty --write $$_.FullName } }"
 
 .PHONY: bump-version
 bump-version:

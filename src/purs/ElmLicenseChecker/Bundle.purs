@@ -4,7 +4,6 @@ module ElmLicenseChecker.Bundle
   ) where
 
 -- The combination of re-exporting modules and bundling is something bad.
-
 import Prelude
 import ElmLicenseChecker.Foreign (License, init) as Foreign
 import ElmLicenseChecker.CLI (cli) as CLI

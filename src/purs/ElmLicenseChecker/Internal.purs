@@ -38,9 +38,9 @@ newtype Version
 type ElmJsonApplication
   = { "elm-version" :: Version
     , dependencies ::
-      { direct :: Object Version
-      , indirect :: Object Version
-      }
+        { direct :: Object Version
+        , indirect :: Object Version
+        }
     , license :: Maybe String
     }
 

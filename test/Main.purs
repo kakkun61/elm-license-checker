@@ -1,9 +1,7 @@
 module Test.Main where
 
 import ElmLicenseChecker (init)
-
 import Prelude (Unit, bind, ($))
-
 import Data.Set (Set)
 import Data.Set as Set
 import Effect (Effect)
@@ -27,8 +25,11 @@ expectedLicenseNames =
     ]
 
 main :: Effect Unit
-main = launchAff_ $ runSpec [consoleReporter] do
-  it "name" do
-    licenses <- liftEffect $ init "./test-asset"
-    let actual = Set.map (\l -> l.name) $ licenses
-    actual `shouldEqual` expectedLicenseNames
+main =
+  launchAff_
+    $ runSpec [ consoleReporter ] do
+        it "name" do
+          licenses <- liftEffect $ init "./test-asset"
+          let
+            actual = Set.map (\l -> l.name) $ licenses
+          actual `shouldEqual` expectedLicenseNames
