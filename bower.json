@@ -15,14 +15,17 @@
     ],
     "dependencies": {
         "purescript-effect": "^v2.0.1",
+        "purescript-maybe": "^v4.0.1",
         "purescript-node-fs": "^v5.0.1",
         "purescript-node-path": "^v3.0.0",
         "purescript-node-process": "^v7.0.0",
-        "purescript-nullable": "^v4.1.1",
+        "purescript-optparse": "^v3.0.1",
         "purescript-parsing": "^v5.0.3",
         "purescript-prelude": "^v4.1.1",
         "purescript-psci-support": "^v4.0.0",
         "purescript-read": "^v1.0.1",
-        "purescript-simple-json": "^v7.0.0"
+        "purescript-simple-json": "^v7.0.0",
+        "purescript-spec": "^v4.0.1",
+        "purescript-tuples": "^v5.1.0"
     }
 }
