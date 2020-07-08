@@ -1,3 +1,8 @@
+# 2.3.0 - 2020.07.09
+
+- releasing command line interface
+  - just `--customPath` option available
+
 # 2.2.1 - 2020.01.16
 
 - fixing the mistake of releasing version 2.2.0
