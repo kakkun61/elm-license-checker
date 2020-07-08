@@ -1,6 +1,6 @@
 # Elm License Checker
 
-[![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit]
+[![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit] ![test](https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg)
 
 [npm]: https://www.npmjs.com/package/elm-license-checker
 [npm-badge]: https://img.shields.io/npm/v/elm-license-checker
