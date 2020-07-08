@@ -2,4 +2,4 @@
 
 "use strict";
 
-require('../output/bundle.js').cli();
+require('../output/bundle').cli();
