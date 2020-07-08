@@ -1,0 +1,25 @@
+name: test
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - uses: JorelAli/setup-elm@v2
+    - run: elm make
+      working-directory: test-asset
+      continue-on-error: true
+    - run: make test-purs
+    - run: make test-ts

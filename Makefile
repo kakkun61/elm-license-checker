@@ -33,7 +33,7 @@ test-ts: node_modules jest.config.js output/bundle.js
 bundle: output/bundle.js
 
 output/bundle.js: build
-	 npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to .\output\bundle.js
+	 npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to output/bundle.js
 
 .PHONY: pack
 pack: elm-license-checker-2.3.0.tgz
