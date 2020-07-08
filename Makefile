@@ -19,8 +19,15 @@ repl: .spago
 	npx spago repl
 
 .PHONY: test
-test: .spago
+test: test-purs test-ts
+
+.PHONY: test-purs
+test-purs: .spago
 	npx spago test
+
+.PHONY: test-ts
+test-ts: node_modules jest.config.js output/bundle.js
+	npx jest
 
 .PHONY: bundle
 bundle: output/bundle.js
@@ -31,7 +38,7 @@ output/bundle.js: build
 .PHONY: pack
 pack: elm-license-checker-2.2.1.tgz
 
-elm-license-checker-2.2.1.tgz: bin/elm-license-checker src/js/index.js src/ts/index.d.ts output/bundle.js
+elm-license-checker-2.2.1.tgz: bin/elm-license-checker src/js/index.js src/js/index.d.ts output/bundle.js
 	npm pack
 
 .PHONY: format

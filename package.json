@@ -3,12 +3,9 @@
   "version": "2.2.1",
   "description": "Check the licenses of Elm packages.",
   "main": "./src/js/index.js",
-  "types": "./src/ts/index.d.ts",
+  "types": "./src/js/index.d.ts",
   "bin": {
     "elm-license-checker": "./bin/elm-license-checker"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -26,13 +23,18 @@
   },
   "homepage": "https://github.com/kakkun61/elm-license-checker",
   "devDependencies": {
+    "@types/jest": "^26.0.4",
     "bower": "^1.8.8",
+    "jest": "^26.1.0",
     "pulp": "^14.0.0",
     "purescript": "^0.13.6",
     "purty": "^6.2.0",
-    "spago": "^0.15.2"
+    "spago": "^0.15.2",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.6"
   },
   "dependencies": {
+    "@types/debug": "^4.1.5",
     "@types/license-checker": "^25.0.0",
     "debug": "^4.1.1",
     "treeify": "^1.1.0"

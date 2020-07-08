@@ -1,6 +1,6 @@
 "use strict";
 
-const lib = require('../../output/bundle.js');
+const lib = require('../../output/bundle');
 const debug = require('debug');
 
 // Set up debug logging
@@ -16,7 +16,7 @@ function init(option, callback) {
   if (0 < unimplemented.length) logWarning('unimplemented options given: %o', unimplemented);
 
   try {
-    callback(null, lib.init(option.start)());
+    callback(null, lib.init(option.start)(option)());
   }
   catch (e) {
     callback(e, null);
