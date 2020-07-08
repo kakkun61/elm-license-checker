@@ -45,6 +45,61 @@ main = do
   -- use the packages
 ```
 
-## CLI interface
+## CLI Interface
 
-The CLI interface is not yet provided.
+- `--customPath` add a custom format file in JSON
+
+### Custom Format
+
+Fields that a format file contains are outputted. Values of fields that licenses do not have are given as ones of fields in a format file.
+
+There are an example file in _test-asset/format.json_.
+
+## Compatibility
+
+Statuses are:
+
+- ⭕ implemented
+- ❌ decided not to be implemented
+- 📄 decided to be implemented but not yet done
+- ⌛ not decided whether implemented or not
+
+### CLI Options
+
+- ⌛ `--production` only show production dependencies
+- ⌛ `--development` only show development dependencies
+- 📄 `--start PATH` give where elm.json is
+- ⌛ `--unknown` report guessed licenses as unknown licenses
+- ⌛ `--onlyunknown` only list packages with unknown or guessed licenses
+- ⌛ `--json` output in json format
+- ⌛ `--csv` output in csv format
+- ⌛ `--csvComponentPrefix` prefix column for component in csv format
+- ⌛ `--out PATH` write the data to a specific file
+- ⭕ `--customPath` add a custom format file in JSON
+- ⌛ `--exclude LICENSES` exclude modules which licenses are in the comma-separated list from the output
+- ⌛ `--relativeLicensePath` output the location of the license files as relative paths
+- ⌛ `--summary` output a summary of the license usage
+- ⌛ `--failOn LICENSES` fail (exit with code 1) on the first occurrence of the licenses of the semicolon-separated list
+- ⌛ `--onlyAllow LICENSES` fail (exit with code 1) on the first occurrence of the licenses not in the semicolon-seperated list
+- ⌛ `--packages PACKAGES` restrict output to the packages (package@version) in the semicolon-seperated list
+- ⌛ `--excludePackages PACKAGES` restrict output to the packages (package@version) not in the semicolon-seperated list
+- ⌛ `--excludePrivatePackages` restrict output to not include any package marked as private
+- ⌛ `--direct` look for direct dependencies only
+
+### Custom Format
+
+There are compatible fields:
+
+- ⭕ `name`
+- ⭕ `version`
+- ⭕ `description` the same as `summary`
+- ⭕ `copyright` always empty
+- ⭕ `licenses` the same as `license`
+- ⭕ `licenseFile`
+- ⭕ `licenseText`
+- ⭕ `licenseModified` always empty
+
+There are added fields:
+
+- ⭕ `summary`
+- ⭕ `license`
