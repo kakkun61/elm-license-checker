@@ -28,7 +28,7 @@ parser = ado
   formatFile <-
     optional
       $ Opt.strOption
-          (Opt.long "customPath" <> Opt.metavar "PATH" <> Opt.help "to add a custom Format file in JSON")
+          (Opt.long "customPath" <> Opt.metavar "PATH" <> Opt.help "Add a custom format file in JSON")
   in ST.run do
     obj <- STObject.new
     maybe (pure unit) (\v -> void $ STObject.poke "customPath" v obj) formatFile
