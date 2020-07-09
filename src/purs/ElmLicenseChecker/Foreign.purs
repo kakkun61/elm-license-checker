@@ -21,7 +21,7 @@ import Foreign.Object.ST (new, poke) as STObject
 import Foreign.Object.ST.Unsafe (unsafeFreeze) as STObject
 import Node.Buffer as Buffer
 import Node.Encoding (Encoding(UTF8))
-import Node.FS.Sync (readFile)
+import Node.FS.Sync (readTextFile)
 import Node.Path (FilePath)
 import Simple.JSON (readJSON)
 
@@ -72,8 +72,7 @@ toForeignLicense l =
 
 readFormat :: FilePath -> Effect Format
 readFormat path = do
-  buf <- readFile path
-  str <- Buffer.toString UTF8 buf
+  str <- readTextFile UTF8 path
   case readJSON str of
     Right json -> pure json
     Left e -> throw $ "readFormat: " <> path <> ": " <> show e
