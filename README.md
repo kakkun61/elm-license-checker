@@ -7,15 +7,50 @@
 [pursuit]: https://pursuit.purescript.org/packages/purescript-elm-license-checker/
 [pursuit-badge]: https://img.shields.io/badge/pursuit-v2.3.0-%231d222d
 
-Treats the licenses of the dependencies of a package.
+Treats the licenses of the dependent packages.
 
 This is inspired by [NPM License Checker](https://github.com/davglass/license-checker).
+
+## CLI Interface
+
+You can show the package information with the selected fields.
+
+```
+> elm-license-checker --customPath format.json
+├─ elm/json@1.1.3
+│  ├─ name: elm/json
+│  ├─ version: 1.1.3
+│  ├─ summary: Encode and decode JSON values
+│  ├─ license: BSD-3-Clause
+│  └─ licenseFile: C:\Users\kazuki\AppData\Roaming\elm\0.19.1\packages\elm\json\1.1.3\LICENSE
+├─ elm/time@1.0.0
+│  ├─ name: elm/time
+│  ├─ version: 1.0.0
+│  ├─ summary: Work with POSIX times, time zones, years, months, days, hours, seconds, etc.
+│  ├─ license: BSD-3-Clause
+│  └─ licenseFile: C:\Users\kazuki\AppData\Roaming\elm\0.19.1\packages\elm\time\1.0.0\LICENSE
+：
+```
+
+### Options
+
+- `--customPath` add a custom format file in JSON
+
+See the section “Compatibility with NPM License Checker”.
+
+### Custom Format
+
+Fields that a format file contains are outputted. Values of fields that licenses do not have are given as ones of fields in a format file.
+
+There are an example file in _test-asset/format.json_.
 
 ## Library Interface
 
 The following is how to use this as a module.
 
 The JavaScript interface is compatible with NPM License Checker, but is actually a subset.
+
+See the section “Compatibility with NPM License Checker”.
 
 ```javascript
 const elc = require('elm-license-checker');
@@ -45,17 +80,7 @@ main = do
   -- use the packages
 ```
 
-## CLI Interface
-
-- `--customPath` add a custom format file in JSON
-
-### Custom Format
-
-Fields that a format file contains are outputted. Values of fields that licenses do not have are given as ones of fields in a format file.
-
-There are an example file in _test-asset/format.json_.
-
-## Compatibility
+## Compatibility with NPM License Checker
 
 Statuses are:
 
