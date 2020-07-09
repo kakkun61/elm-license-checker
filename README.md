@@ -85,31 +85,35 @@ main = do
 Statuses are:
 
 - ⭕ implemented
-- ❌ decided not to be implemented
-- 📄 decided to be implemented but not yet done
+- ❌ ignored
+- 📈 decided to be implemented but not yet done
+- 📉 decided to be ignored but not yet done
 - ⌛ not decided whether implemented or not
 
-### CLI Options
+### Options
 
-- ⌛ `--production` only show production dependencies
-- ⌛ `--development` only show development dependencies
-- 📄 `--start PATH` give where elm.json is
-- ⌛ `--unknown` report guessed licenses as unknown licenses
-- ⌛ `--onlyunknown` only list packages with unknown or guessed licenses
-- ⌛ `--json` output in json format
-- ⌛ `--csv` output in csv format
-- ⌛ `--csvComponentPrefix` prefix column for component in csv format
-- ⌛ `--out PATH` write the data to a specific file
-- ⭕ `--customPath` add a custom format file in JSON
-- ⌛ `--exclude LICENSES` exclude modules which licenses are in the comma-separated list from the output
-- ⌛ `--relativeLicensePath` output the location of the license files as relative paths
-- ⌛ `--summary` output a summary of the license usage
-- ⌛ `--failOn LICENSES` fail (exit with code 1) on the first occurrence of the licenses of the semicolon-separated list
-- ⌛ `--onlyAllow LICENSES` fail (exit with code 1) on the first occurrence of the licenses not in the semicolon-seperated list
-- ⌛ `--packages PACKAGES` restrict output to the packages (package@version) in the semicolon-seperated list
-- ⌛ `--excludePackages PACKAGES` restrict output to the packages (package@version) not in the semicolon-seperated list
-- ⌛ `--excludePrivatePackages` restrict output to not include any package marked as private
-- ⌛ `--direct` look for direct dependencies only
+| Option                   | CLI | JS | PS | Description                                                                                         | 
+|--------------------------|-----|----|----|-----------------------------------------------------------------------------------------------------| 
+| `production`             | ⌛   | ⌛  | ⌛  | only show production dependencies                                                                   | 
+| `development`            | ⌛   | ⌛  | ⌛  | only show development dependencies                                                                  | 
+| `start`                  | 📈  | ⭕  | ⭕  | give where elm.json is                                                                              | 
+| `unknown`                | ⌛   | ⌛  | ⌛  | report guessed licenses as unknown licenses                                                         | 
+| `onlyunknown`            | ⌛   | ⌛  | ⌛  | only list packages with unknown or guessed licenses                                                 | 
+| `json`                   | ⭕   | 📈  | ❌  | output in json format                                                                               | 
+| `csv`                    | ⌛   | ⌛  | ❌  | output in csv format                                                                                | 
+| `csvComponentPrefix`     | ⌛   | ⌛  | ⌛  | prefix column for component in csv format                                                           | 
+| `out`                    | ⭕   | ❌  | ❌  | write the data to a specific file                                                                   | 
+| `customPath`             | ⭕   | ⭕  | ❌  | add a custom format file in JSON                                                                    | 
+| `exclude`                | ⌛   | ⌛  | ⌛  | exclude modules which licenses are in the comma-separated list from the output                      | 
+| `relativeLicensePath`    | ⌛   | ⌛  | ⌛  | output the location of the license files as relative paths                                          | 
+| `summary`                | ⌛   | ⌛  | ⌛  | output a summary of the license usage                                                               | 
+| `failOn`                 | ⌛   | ⌛  | ⌛  | fail (exit with code 1) on the first occurrence of the licenses of the semicolon-separated list     | 
+| `onlyAllow`              | ⌛   | ⌛  | ⌛  | fail (exit with code 1) on the first occurrence of the licenses not in the semicolon-separated list | 
+| `packages`               | ⌛   | ⌛  | ⌛  | restrict output to the packages (package@version) in the semicolon-separated list                   | 
+| `excludePackages`        | ⌛   | ⌛  | ⌛  | restrict output to the packages (package@version) not in the semicolon-separated list               | 
+| `excludePrivatePackages` | ⌛   | ⌛  | ⌛  | restrict output to not include any package marked as private                                        | 
+| `direct`                 | ⌛   | ⌛  | ⌛  | look for direct dependencies only                                                                   | 
+
 
 ### Custom Format
 
