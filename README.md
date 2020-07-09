@@ -1,5 +1,7 @@
 # Elm License Checker
 
+[![Join the chat at https://gitter.im/elm-license-checker/community](https://badges.gitter.im/elm-license-checker/community.svg)](https://gitter.im/elm-license-checker/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit] ![test](https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg)
 
 [npm]: https://www.npmjs.com/package/elm-license-checker
