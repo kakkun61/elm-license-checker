@@ -29,7 +29,7 @@ You can show the package information with the selected fields.
 │  ├─ summary: Work with POSIX times, time zones, years, months, days, hours, seconds, etc.
 │  ├─ license: BSD-3-Clause
 │  └─ licenseFile: C:\Users\kazuki\AppData\Roaming\elm\0.19.1\packages\elm\time\1.0.0\LICENSE
-：
+:
 ```
 
 ### Options
