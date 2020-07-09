@@ -32,11 +32,7 @@ You can show the package information with the selected fields.
 :
 ```
 
-### Options
-
-- `--customPath` add a custom format file in JSON
-
-See the section “Compatibility with NPM License Checker”.
+See the section “Compatibility with NPM License Checker” for options.
 
 ### Custom Format
 
