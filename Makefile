@@ -50,12 +50,15 @@ bump-version:
 	npx spago bump-version --no-dry-run $(BUMP)
 
 .PHONY: publish-npm
-publish-npm:
+publish-npm: output/bundle.js
 	npm publish
 
 .PHONY: publish-pulp
-publish-pulp:
+publish-pulp: bower_components
 	npx pulp publish
+
+bower_components: bower.json
+	npx bower install
 
 .PHONY: clean
 clean:
