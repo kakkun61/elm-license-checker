@@ -1,6 +1,6 @@
 # Elm License Checker
 
-[![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit] ![test](https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg) [![Join the chat at https://gitter.im/elm-license-checker/community](https://badges.gitter.im/elm-license-checker/community.svg)](https://gitter.im/elm-license-checker/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red?logo=GitHub)](https://github.com/sponsors/kakkun61)
+[![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit] [![test](https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg)](https://github.com/kakkun61/elm-license-checker/actions?query=workflow%3Atest) [![Join the chat at https://gitter.im/elm-license-checker/community](https://badges.gitter.im/elm-license-checker/community.svg)](https://gitter.im/elm-license-checker/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red?logo=GitHub)](https://github.com/sponsors/kakkun61)
 
 [npm]: https://www.npmjs.com/package/elm-license-checker
 [npm-badge]: https://img.shields.io/npm/v/elm-license-checker
