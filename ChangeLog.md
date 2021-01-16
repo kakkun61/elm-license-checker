@@ -1,3 +1,8 @@
+# 2.4.0 - 2021.01.16
+
+- adding `--json` and `--out` command line options
+- upgrading dependencies
+
 # 2.3.0 - 2020.07.09
 
 - releasing command line interface
@@ -11,7 +16,7 @@
 
 **Don't use version 2.2.0.** There is a mistake in the procedure of releasing version 2.2.0.
 
-- add “@” and versions to keys (foo → foo@1.0.0)
+- adding “@” and versions to keys (foo → foo@1.0.0)
   - for more compatibility with NPM License Checker
 - bundling (NPM package unpacked size: 18MB → 180kB)
 - getting more tolerant to PureScript's internal representations

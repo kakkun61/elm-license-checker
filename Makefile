@@ -36,9 +36,9 @@ output/bundle.js: build
 	 npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to output/bundle.js
 
 .PHONY: pack
-pack: elm-license-checker-2.3.0.tgz
+pack: elm-license-checker-2.4.0.tgz
 
-elm-license-checker-2.3.0.tgz: bin/elm-license-checker src/js/index.js src/js/index.d.ts output/bundle.js
+elm-license-checker-2.4.0.tgz: bin/elm-license-checker src/js/index.js src/js/index.d.ts output/bundle.js
 	npm pack
 
 .PHONY: format
