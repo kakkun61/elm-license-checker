@@ -36,7 +36,7 @@ See the section “Compatibility with NPM License Checker” for options.
 
 ### Custom Format
 
-Fields that a format file contains are outputted. Values of fields that licenses do not have are given as ones of fields in a format file.
+Fields that a format file contains are outputted. Values of fields that licenses do not have are given as ones of fields in a format file. Please also refer [a document of the NPM License Checker](https://github.com/davglass/license-checker#custom-format).
 
 There are an example file in _test-asset/format.json_.
 
