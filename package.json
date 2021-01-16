@@ -24,6 +24,7 @@
   "homepage": "https://github.com/kakkun61/elm-license-checker",
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "bower": "^1.8.10",
     "jest": "^26.6.3",
     "pulp": "^15.0.0",
     "purescript": "^0.13.8",
