@@ -19,7 +19,6 @@ import Foreign.Object as Object
 import Foreign.Object.ST (STObject)
 import Foreign.Object.ST (new, poke) as STObject
 import Foreign.Object.ST.Unsafe (unsafeFreeze) as STObject
-import Node.Buffer as Buffer
 import Node.Encoding (Encoding(UTF8))
 import Node.FS.Sync (readTextFile)
 import Node.Path (FilePath)
