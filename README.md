@@ -1,11 +1,17 @@
 # Elm License Checker
 
-[![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit] [![test](https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg)](https://github.com/kakkun61/elm-license-checker/actions?query=workflow%3Atest) [![Join the chat at https://gitter.im/elm-license-checker/community](https://badges.gitter.im/elm-license-checker/community.svg)](https://gitter.im/elm-license-checker/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red?logo=GitHub)](https://github.com/sponsors/kakkun61)
+[![NPM][npm-badge]][npm] [![Pursuit][pursuit-badge]][pursuit] [![CI][ci-badge]][ci] [![Gitter][chat-badge]][chat] [![Sponsor][sponsor-badge]][sponsor]
 
 [npm]: https://www.npmjs.com/package/elm-license-checker
 [npm-badge]: https://img.shields.io/npm/v/elm-license-checker
 [pursuit]: https://pursuit.purescript.org/packages/purescript-elm-license-checker/
 [pursuit-badge]: https://img.shields.io/badge/pursuit-v2.4.0-%231d222d
+[ci]: https://github.com/kakkun61/elm-license-checker/actions?query=workflow%3Atest
+[ci-badge]: https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg
+[chat]: https://gitter.im/elm-license-checker/community
+[chat-badge]: https://badges.gitter.im/elm-license-checker/community.svg
+[sponsor]: https://github.com/sponsors/kakkun61
+[sponsor-badge]: https://img.shields.io/badge/Sponsor-%E2%9D%A4-red?logo=GitHub
 
 Treats the licenses of the dependent packages.
 
