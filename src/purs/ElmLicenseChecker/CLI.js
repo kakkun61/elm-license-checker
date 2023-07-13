@@ -1,5 +1,5 @@
 "use strict";
 
-const treeify = require('treeify');
+import { asTree } from 'treeify';
 
-exports.treeify = (obj) => treeify.asTree(obj, true, false);
+export let treeify = (obj) => asTree(obj, true, false);
