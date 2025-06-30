@@ -24,12 +24,12 @@ jobs:
         path: node_modules
         key: nodejs-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
     - name: Cache elm
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: ~/.elm
         key: elm-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('test-asset/elm.json') }}
     - name: Cache purescript
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: .spago
         key: purescript-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('spago.dhall') }}-${{ hashFiles('packages.dhall') }}
