@@ -5,7 +5,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/kakkun61/elm-license-checker.git"
+        "url": "git://github.com/kakkun61/elm-license-checker.git"
     },
     "ignore": [
         "**/.*",
@@ -14,18 +14,30 @@
         "output"
     ],
     "dependencies": {
-        "purescript-effect": "^v2.0.1",
-        "purescript-maybe": "^v4.0.1",
-        "purescript-node-fs": "^v5.0.1",
-        "purescript-node-path": "^v3.0.0",
-        "purescript-node-process": "^v7.0.0",
-        "purescript-optparse": "^v3.0.1",
-        "purescript-parsing": "^v5.0.3",
-        "purescript-prelude": "^v4.1.1",
-        "purescript-psci-support": "^v4.0.0",
+        "purescript-aff": "^v8.0.0",
+        "purescript-arrays": "^v7.3.0",
+        "purescript-console": "^v6.1.0",
+        "purescript-effect": "^v4.0.0",
+        "purescript-either": "^v6.1.0",
+        "purescript-exceptions": "^v6.1.0",
+        "purescript-foldable-traversable": "^v6.0.0",
+        "purescript-foreign": "^v7.0.0",
+        "purescript-foreign-object": "^v4.1.0",
+        "purescript-maybe": "^v6.0.0",
+        "purescript-node-buffer": "^v9.0.0",
+        "purescript-node-fs": "^v9.2.0",
+        "purescript-node-path": "^v5.0.1",
+        "purescript-node-process": "^v11.2.0",
+        "purescript-optparse": "^v6.0.0",
+        "purescript-ordered-collections": "^v3.2.0",
+        "purescript-parsing": "^v10.3.0",
+        "purescript-prelude": "^v6.0.2",
         "purescript-read": "^v1.0.1",
-        "purescript-simple-json": "^v7.0.0",
-        "purescript-spec": "^v4.0.1",
-        "purescript-tuples": "^v5.1.0"
+        "purescript-simple-json": "^v9.0.0",
+        "purescript-spec": "^v8.1.1",
+        "purescript-st": "^v6.2.0",
+        "purescript-strings": "^v6.0.1",
+        "purescript-tuples": "^v7.0.0",
+        "purescript-unicode": "^v6.0.0"
     }
 }

@@ -1,3 +1,7 @@
+# 2.5.0 - 2025.07.24
+
+- upgrading dependencies
+
 # 2.4.0 - 2021.01.16
 
 - adding `--json` and `--out` command line options

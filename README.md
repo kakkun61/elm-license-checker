@@ -5,7 +5,7 @@
 [npm]: https://www.npmjs.com/package/elm-license-checker
 [npm-badge]: https://img.shields.io/npm/v/elm-license-checker
 [pursuit]: https://pursuit.purescript.org/packages/purescript-elm-license-checker/
-[pursuit-badge]: https://img.shields.io/badge/pursuit-v2.4.0-%231d222d
+[pursuit-badge]: https://img.shields.io/badge/pursuit-v2.5.0-%231d222d
 [ci]: https://github.com/kakkun61/elm-license-checker/actions?query=workflow%3Atest
 [ci-badge]: https://github.com/kakkun61/elm-license-checker/workflows/test/badge.svg
 [chat]: https://gitter.im/elm-license-checker/community
