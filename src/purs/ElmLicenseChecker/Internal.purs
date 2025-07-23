@@ -6,7 +6,9 @@ module ElmLicenseChecker.Internal
 
 import Prelude
 import Data.Array (some, uncons)
-import Data.Char.Unicode as Char
+import Data.CodePoint.Unicode as CodePoint
+import Data.String.CodePoints (CodePoint)
+import Data.String.CodePoints as CodePoints
 import Data.Either (Either(Left, Right))
 import Data.Maybe (Maybe(Nothing, Just))
 import Data.Semigroup.First (First(First))
@@ -26,10 +28,10 @@ import Node.Path (FilePath, sep)
 import Node.Platform (Platform(Win32))
 import Node.Process (lookupEnv, platform)
 import Simple.JSON (class ReadForeign, readJSON)
-import Text.Parsing.Parser (fail) as P
-import Text.Parsing.Parser (runParser)
-import Text.Parsing.Parser.String (char) as P
-import Text.Parsing.Parser.Token (digit) as P
+import Parsing (fail) as P
+import Parsing (runParser)
+import Parsing.String (char) as P
+import Parsing.Token (digit) as P
 
 newtype Version
   = Version { major :: Int, minor :: Int, patch :: Int }
@@ -95,7 +97,7 @@ instance readVersion :: Read Version where
         go :: Int -> Array Char -> Maybe Int
         go acc b = case uncons b of
           Just u -> do
-            i <- Char.digitToInt u.head
+            i <- CodePoint.digitToInt $ CodePoints.codePointFromChar u.head
             go (10 * acc + i) u.tail
           Nothing -> pure acc
 

@@ -1,4 +1,4 @@
-import { init } from '../src/js/index';
+import { init } from '../src/js/index.js';
 
 describe('init', () => {
   test('just run', done => {

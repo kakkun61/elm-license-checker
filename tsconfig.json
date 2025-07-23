@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "es6",
+    "target": "es6"
+  }
+}

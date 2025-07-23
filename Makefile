@@ -26,14 +26,14 @@ test-purs: .spago
 	npx spago test
 
 .PHONY: test-ts
-test-ts: node_modules jest.config.js output/bundle.js
-	npx jest
+test-ts: node_modules jest.config.cjs output/bundle.js
+	node --experimental-vm-modules node_modules/jest/bin/jest.js
 
 .PHONY: bundle
 bundle: output/bundle.js
 
 output/bundle.js: build
-	 npx spago bundle-module --no-build --main ElmLicenseChecker.Bundle --to output/bundle.js
+	npx spago bundle-module --platform=node --no-build --main ElmLicenseChecker.Bundle --to output/bundle.js
 
 .PHONY: pack
 pack: elm-license-checker-2.4.0.tgz
