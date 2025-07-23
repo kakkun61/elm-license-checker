@@ -1,5 +1,3 @@
-"use strict";
+import treeifyLib from 'treeify';
 
-const treeify = require('treeify');
-
-exports.treeify = (obj) => treeify.asTree(obj, true, false);
+export const treeify = (obj) => treeifyLib.asTree(obj, true, false);

@@ -1,7 +1,5 @@
-"use strict";
-
-const lib = require('../../output/bundle');
-const debug = require('debug');
+import * as lib from '../../output/bundle.js';
+import debug from 'debug';
 
 // Set up debug logging
 // https://www.npmjs.com/package/debug#stderr-vs-stdout
@@ -30,6 +28,4 @@ function getUnimplemented(option) {
   return given.filter((e) => !implemented.includes(e));
 }
 
-module.exports = {
-  init: init
-};
+export { init };
