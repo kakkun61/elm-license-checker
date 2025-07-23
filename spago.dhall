@@ -13,6 +13,7 @@
     , "simple-json"
     , "spec"
     , "tuples"
+    , "unicode"
     ]
 , packages = ./packages.dhall
 , sources = [ "src/purs/**/*.purs", "test/**/*.purs" ]
