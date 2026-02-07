@@ -19,17 +19,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - uses: JorelAli/setup-elm@v6
     - name: Cache nodejs
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: node_modules
         key: nodejs-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('package.json') }}-${{ hashFiles('package-lock.json') }}
     - name: Cache elm
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.elm
         key: elm-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('test-asset/elm.json') }}
     - name: Cache purescript
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: .spago
         key: purescript-${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('spago.dhall') }}-${{ hashFiles('packages.dhall') }}
